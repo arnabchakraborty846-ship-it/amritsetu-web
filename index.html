@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AmritSetu — अमृतसेतु | The Nectar of Hindu Wisdom</title>
+<meta name="description" content="AmritSetu bridges ancient Hindu scriptures with modern life. Ask any question in any Indian language and receive answers with authentic shlokas, meanings and real-life examples.">
+<meta name="google-site-verification" content="vEf9eTyGwOYMncqGzS_Avzrj8vhh7NCqggXehEw59NA" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Sans+Devanagari:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & ROOT ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --saffron:#E8650A;
+  --saffron-dark:#B34D06;
+  --saffron-light:#FDF0E6;
+  --gold:#C8941A;
+  --gold-light:#FBF3E2;
+  --brown:#2D1B0E;
+  --brown-mid:#5a3215;
+  --cream:#FFFBF5;
+  --parchment:#FDF5E8;
+  --text:#1a1208;
+  --text-muted:#6b5c45;
+  --border:#e8d5bb;
+  --green:#2e7d32;
+  --green-light:#f1f8f1;
+}
+
+html{scroll-behavior:smooth}
+body{
+  font-family:'Lora',serif;
+  background:var(--cream);
+  color:var(--text);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--saffron);border-radius:3px}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(45,27,14,0.97);
+  backdrop-filter:blur(10px);
+  padding:0 2rem;
+  height:64px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid rgba(232,101,10,0.3);
+}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-om{font-size:22px;color:var(--saffron)}
+.nav-name{font-family:'Cinzel',serif;font-size:18px;font-weight:600;color:#fff;letter-spacing:2px}
+.nav-name span{color:var(--saffron)}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-links a{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1px;color:#d4a97a;text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--saffron)}
+.nav-cta{
+  padding:8px 20px;
+  background:var(--saffron);
+  color:#fff!important;
+  border-radius:6px;
+  font-family:'Cinzel',serif;
+  font-size:12px;
+  letter-spacing:1px;
+  transition:background 0.2s!important;
+}
+.nav-cta:hover{background:var(--saffron-dark)!important;color:#fff!important}
+.nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;color:#fff;font-size:20px}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;
+  background:linear-gradient(160deg,var(--brown) 0%,var(--brown-mid) 50%,#3d2010 100%);
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+  padding:100px 2rem 60px;
+}
+.hero-pattern{
+  position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(232,101,10,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(200,148,26,0.06) 0%, transparent 50%);
+  pointer-events:none;
+}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(232,101,10,0.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(232,101,10,0.05) 1px,transparent 1px);
+  background-size:60px 60px;
+  pointer-events:none;
+}
+.hero-content{
+  position:relative;z-index:2;
+  text-align:center;
+  max-width:800px;
+}
+.hero-om{
+  font-size:72px;
+  color:var(--saffron);
+  line-height:1;
+  margin-bottom:1rem;
+  animation:omPulse 3s ease-in-out infinite;
+}
+@keyframes omPulse{0%,100%{text-shadow:0 0 20px rgba(232,101,10,0.3)}50%{text-shadow:0 0 40px rgba(232,101,10,0.6)}}
+.hero-devanagari{
+  font-family:'Noto Sans Devanagari',sans-serif;
+  font-size:16px;color:#d4a97a;
+  letter-spacing:4px;margin-bottom:1.5rem;
+}
+.hero-title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(36px,6vw,68px);
+  font-weight:700;
+  color:#fff;
+  letter-spacing:4px;
+  line-height:1.1;
+  margin-bottom:0.5rem;
+}
+.hero-title span{color:var(--saffron)}
+.hero-subtitle{
+  font-size:clamp(14px,2vw,18px);
+  color:#d4a97a;
+  margin-bottom:2rem;
+  font-style:italic;
+  line-height:1.7;
+}
+.hero-langs{
+  display:flex;flex-wrap:wrap;gap:6px;
+  justify-content:center;
+  margin-bottom:2.5rem;
+}
+.lang-pill{
+  font-size:12px;padding:4px 12px;
+  border-radius:20px;
+  border:1px solid rgba(232,101,10,0.4);
+  color:#d4a97a;
+  background:rgba(232,101,10,0.08);
+  cursor:pointer;
+  transition:all 0.2s;
+  font-family:'Noto Sans Devanagari',sans-serif;
+}
+.lang-pill:hover,.lang-pill.active{
+  background:var(--saffron);
+  border-color:var(--saffron);
+  color:#fff;
+}
+.hero-search{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(232,101,10,0.3);
+  border-radius:16px;
+  padding:1.5rem;
+  backdrop-filter:blur(10px);
+  margin-bottom:2rem;
+}
+.search-input-wrap{display:flex;gap:10px;align-items:flex-end}
+.hero-textarea{
+  flex:1;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(232,101,10,0.3);
+  border-radius:10px;
+  padding:12px 16px;
+  font-family:'Lora',serif;
+  font-size:15px;
+  color:#fff;
+  min-height:72px;
+  resize:none;
+  outline:none;
+  line-height:1.6;
+  transition:border-color 0.2s;
+}
+.hero-textarea::placeholder{color:rgba(212,169,122,0.6)}
+.hero-textarea:focus{border-color:var(--saffron)}
+.hero-ask-btn{
+  padding:14px 28px;
+  background:var(--saffron);
+  color:#fff;
+  border:none;
+  border-radius:10px;
+  font-family:'Cinzel',serif;
+  font-size:14px;
+  cursor:pointer;
+  transition:all 0.2s;
+  white-space:nowrap;
+  letter-spacing:1px;
+}
+.hero-ask-btn:hover{background:var(--saffron-dark);transform:translateY(-1px)}
+.hero-ask-btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.sample-qs{display:flex;flex-wrap:wrap;gap:7px;justify-content:center}
+.sample-q{
+  font-size:12px;padding:6px 14px;
+  border-radius:8px;
+  border:1px solid rgba(232,101,10,0.25);
+  color:#d4a97a;
+  background:transparent;
+  cursor:pointer;
+  transition:all 0.2s;
+  font-family:'Lora',serif;
+}
+.sample-q:hover{border-color:var(--saffron);color:var(--saffron);background:rgba(232,101,10,0.1)}
+
+/* ── LOADING ── */
+.loading{display:none;align-items:center;gap:10px;color:#d4a97a;font-size:14px;padding:12px 0;justify-content:center}
+.loading.on{display:flex}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--saffron);animation:pulse 1.2s ease-in-out infinite}
+.dot:nth-child(2){animation-delay:.2s}.dot:nth-child(3){animation-delay:.4s}
+@keyframes pulse{0%,100%{opacity:.2}50%{opacity:1}}
+
+/* ── ANSWER CARD ── */
+.answer-wrap{display:none;margin-top:1.5rem;text-align:left}
+.answer-wrap.on{display:block;animation:fadeUp 0.4s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.answer-card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(232,101,10,0.3);
+  border-radius:14px;
+  overflow:hidden;
+  backdrop-filter:blur(10px);
+}
+.answer-head{
+  background:linear-gradient(90deg,rgba(45,27,14,0.8),rgba(90,50,21,0.8));
+  padding:12px 20px;
+  display:flex;align-items:center;gap:10px;
+  border-bottom:1px solid rgba(232,101,10,0.2);
+}
+.answer-head-text{font-family:'Cinzel',serif;font-size:11px;letter-spacing:2px;color:#d4a97a;text-transform:uppercase}
+.answer-body{padding:1.5rem}
+.verse-block{
+  background:rgba(232,101,10,0.1);
+  border-left:3px solid var(--saffron);
+  border-radius:0 10px 10px 0;
+  padding:14px 18px;margin-bottom:1.25rem;
+}
+.verse-text{font-style:italic;font-size:15px;line-height:1.85;color:#f5e6d0}
+.verse-source{font-size:12px;color:var(--saffron);margin-top:8px;font-weight:500}
+.meaning-text{font-size:14px;line-height:1.9;color:#e8d5b8;margin-bottom:1.25rem}
+.meaning-text p+p{margin-top:10px}
+.relate-block{
+  background:rgba(200,148,26,0.08);
+  border:1px solid rgba(200,148,26,0.25);
+  border-radius:10px;padding:14px 18px;margin-bottom:1.25rem;
+}
+.relate-label{font-family:'Cinzel',serif;font-size:10px;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
+.relate-text{font-size:13px;line-height:1.85;color:#e8d5b8}
+.verify-block{
+  background:rgba(46,125,50,0.08);
+  border:1px solid rgba(46,125,50,0.2);
+  border-radius:10px;padding:12px 16px;margin-bottom:1rem;
+}
+.verify-label{font-family:'Cinzel',serif;font-size:10px;letter-spacing:1px;color:#81c784;text-transform:uppercase;margin-bottom:8px}
+.verify-links{display:flex;flex-wrap:wrap;gap:6px}
+.verify-link{
+  font-size:11px;padding:4px 10px;border-radius:20px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(46,125,50,0.3);
+  color:#81c784;text-decoration:none;transition:all 0.15s;
+}
+.verify-link:hover{background:rgba(46,125,50,0.2);color:#a5d6a7}
+.iit-block{
+  background:rgba(21,101,192,0.08);
+  border:1px solid rgba(21,101,192,0.2);
+  border-radius:10px;padding:12px 16px;margin-bottom:1rem;
+}
+.iit-label{font-family:'Cinzel',serif;font-size:10px;letter-spacing:1px;color:#64b5f6;text-transform:uppercase;margin-bottom:8px}
+.iit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:5px}
+.iit-btn{
+  font-size:11px;padding:5px 8px;border-radius:6px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(21,101,192,0.25);
+  color:#90caf9;cursor:pointer;transition:all 0.15s;text-align:left;line-height:1.4;
+}
+.iit-btn:hover{background:rgba(21,101,192,0.2);color:#bbdefb}
+.refs-block{background:rgba(255,255,255,0.04);border:1px solid rgba(232,101,10,0.15);border-radius:10px;padding:12px 16px}
+.refs-label{font-family:'Cinzel',serif;font-size:10px;letter-spacing:1px;color:#d4a97a;text-transform:uppercase;margin-bottom:8px}
+.refs-list{list-style:none}
+.refs-list li{font-size:12px;color:#81c784;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.06);line-height:1.5}
+.refs-list li:last-child{border:none}
+.manu-disclaimer{
+  background:rgba(255,193,7,0.08);border:1px solid rgba(255,193,7,0.2);
+  border-radius:10px;padding:14px 16px;margin-bottom:1rem;
+}
+.manu-label{font-family:'Cinzel',serif;font-size:10px;letter-spacing:1px;color:#ffd54f;text-transform:uppercase;margin-bottom:8px}
+.manu-text{font-size:12px;line-height:1.8;color:#ffe082}
+.error-msg{color:#ef9a9a;font-size:14px;padding:1rem;line-height:1.7}
+
+/* ── STATS STRIP ── */
+.stats-strip{
+  background:var(--brown);
+  padding:1.5rem 2rem;
+  display:flex;flex-wrap:wrap;gap:0;
+  justify-content:center;
+}
+.stat{
+  text-align:center;
+  padding:0.75rem 2.5rem;
+  border-right:1px solid rgba(232,101,10,0.2);
+}
+.stat:last-child{border:none}
+.stat-num{font-family:'Cinzel',serif;font-size:28px;font-weight:700;color:var(--saffron)}
+.stat-label{font-size:12px;color:#d4a97a;margin-top:2px;letter-spacing:0.5px}
+
+/* ── SECTIONS ── */
+.section{padding:5rem 2rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(24px,4vw,36px);
+  font-weight:600;
+  color:var(--brown);
+  text-align:center;
+  margin-bottom:0.75rem;
+}
+.section-sub{
+  font-size:15px;color:var(--text-muted);
+  text-align:center;
+  margin-bottom:3rem;
+  font-style:italic;
+  max-width:600px;
+  margin-left:auto;margin-right:auto;
+  line-height:1.7;
+}
+
+/* ── SCRIPTURES GRID ── */
+.scriptures-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.scripture-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;padding:1.25rem;
+  transition:all 0.2s;
+  position:relative;overflow:hidden;
+}
+.scripture-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--saffron);transform:scaleX(0);transition:transform 0.3s;
+}
+.scripture-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(232,101,10,0.12)}
+.scripture-card:hover::before{transform:scaleX(1)}
+.sc-icon{font-size:24px;margin-bottom:8px}
+.sc-name{font-family:'Cinzel',serif;font-size:14px;font-weight:500;color:var(--brown);margin-bottom:4px}
+.sc-desc{font-size:12px;color:var(--text-muted);line-height:1.5}
+.sc-badge{
+  display:inline-block;font-size:10px;padding:2px 8px;
+  border-radius:10px;margin-top:6px;
+  font-family:'Cinzel',serif;letter-spacing:0.5px;
+}
+.sc-uploaded{background:#e8f5e9;color:#2e7d32;border:0.5px solid #a5d6a7}
+.sc-coming{background:#fff8e1;color:#f57f17;border:0.5px solid #ffcc02}
+
+/* ── HOW IT WORKS ── */
+.how-bg{background:var(--parchment)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;margin-top:1rem}
+.step{text-align:center;padding:1.5rem}
+.step-num{
+  width:52px;height:52px;border-radius:50%;
+  background:var(--saffron);color:#fff;
+  font-family:'Cinzel',serif;font-size:20px;font-weight:600;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 1rem;
+}
+.step-title{font-family:'Cinzel',serif;font-size:15px;color:var(--brown);margin-bottom:8px}
+.step-desc{font-size:13px;color:var(--text-muted);line-height:1.7}
+
+/* ── FEATURES ── */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.feature-card{
+  background:#fff;border:1px solid var(--border);
+  border-radius:14px;padding:1.5rem;
+  transition:transform 0.2s;
+}
+.feature-card:hover{transform:translateY(-2px)}
+.feat-icon{font-size:32px;margin-bottom:12px}
+.feat-title{font-family:'Cinzel',serif;font-size:16px;color:var(--brown);margin-bottom:8px}
+.feat-desc{font-size:13px;color:var(--text-muted);line-height:1.7}
+
+/* ── LANGUAGES ── */
+.lang-bg{background:linear-gradient(135deg,var(--brown),var(--brown-mid))}
+.lang-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.lang-card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(232,101,10,0.2);
+  border-radius:10px;padding:12px;text-align:center;
+  transition:all 0.2s;cursor:pointer;
+}
+.lang-card:hover{background:rgba(232,101,10,0.15);border-color:var(--saffron)}
+.lang-native{font-size:20px;color:#fff;margin-bottom:4px;font-family:'Noto Sans Devanagari',sans-serif}
+.lang-english{font-size:11px;color:#d4a97a;letter-spacing:0.5px}
+
+/* ── TESTIMONIAL ── */
+.testimonial-bg{background:var(--parchment)}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.testi{
+  background:#fff;border:1px solid var(--border);
+  border-radius:14px;padding:1.5rem;
+  border-left:4px solid var(--saffron);
+}
+.testi-text{font-size:14px;line-height:1.8;color:var(--text);font-style:italic;margin-bottom:1rem}
+.testi-author{font-family:'Cinzel',serif;font-size:12px;color:var(--text-muted)}
+
+/* ── CTA ── */
+.cta-section{
+  background:linear-gradient(135deg,var(--brown),var(--brown-mid));
+  padding:5rem 2rem;text-align:center;
+}
+.cta-title{font-family:'Cinzel',serif;font-size:clamp(24px,4vw,40px);color:#fff;margin-bottom:1rem;font-weight:600}
+.cta-sub{font-size:16px;color:#d4a97a;margin-bottom:2rem;font-style:italic}
+.cta-btn{
+  display:inline-block;
+  padding:16px 40px;
+  background:var(--saffron);color:#fff;
+  border-radius:10px;
+  font-family:'Cinzel',serif;font-size:16px;
+  text-decoration:none;
+  transition:all 0.2s;
+  letter-spacing:1px;
+  border:none;cursor:pointer;
+}
+.cta-btn:hover{background:var(--saffron-dark);transform:translateY(-2px)}
+
+/* ── FOOTER ── */
+footer{
+  background:#0f0804;
+  padding:3rem 2rem 1.5rem;
+  color:#9a7a5a;
+}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2rem}
+.footer-brand .brand-name{font-family:'Cinzel',serif;font-size:20px;color:#fff;letter-spacing:2px;margin-bottom:8px}
+.footer-brand .brand-name span{color:var(--saffron)}
+.footer-brand p{font-size:13px;line-height:1.7;color:#9a7a5a}
+.footer-col h4{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1px;color:#d4a97a;text-transform:uppercase;margin-bottom:12px}
+.footer-col a{display:block;font-size:13px;color:#9a7a5a;text-decoration:none;margin-bottom:6px;transition:color 0.2s}
+.footer-col a:hover{color:var(--saffron)}
+.footer-bottom{
+  border-top:1px solid rgba(232,101,10,0.15);
+  padding-top:1.5rem;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+}
+.footer-bottom p{font-size:12px;color:#6b5c45}
+.footer-om{font-size:18px;color:var(--saffron)}
+
+/* Backend powered - no API key needed */
+
+/* ── LANG BAR ── */
+.lang-bar{
+  background:var(--brown);
+  padding:8px 2rem;
+  display:flex;flex-wrap:wrap;gap:5px;justify-content:center;
+  position:sticky;top:64px;z-index:90;
+  border-bottom:1px solid rgba(232,101,10,0.2);
+}
+.lb-btn{
+  font-size:11px;padding:3px 11px;border-radius:20px;
+  border:1px solid rgba(90,50,21,0.6);
+  color:#d4a97a;background:transparent;cursor:pointer;
+  transition:all 0.15s;font-family:'Noto Sans Devanagari',sans-serif;
+}
+.lb-btn.active,.lb-btn:hover{background:var(--saffron);border-color:var(--saffron);color:#fff}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-mobile-toggle{display:block}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .stats-strip{gap:1rem}
+  .stat{border:none;padding:0.5rem 1rem}
+  .lang-bar{top:64px}
+  #apiSection .api-inner{flex-direction:column;align-items:stretch}
+}
+@media(max-width:480px){
+  .footer-top{grid-template-columns:1fr}
+  .search-input-wrap{flex-direction:column}
+  .hero-ask-btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- Backend powered - no key needed -->
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="nav-om">ॐ</span>
+    <span class="nav-name">Amrit<span>Setu</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="#scriptures">Scriptures</a>
+    <a href="#how">How it works</a>
+    <a href="#languages">Languages</a>
+    <a href="#about">About</a>
+    <a href="#credits">Credits</a>
+    <a href="#ask" class="nav-cta">Ask a Question</a>
+  </div>
+  <button class="nav-mobile-toggle" onclick="toggleMenu()">☰</button>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar" id="langBar">
+  <button class="lb-btn active" onclick="setLang(this,'English')">English</button>
+  <button class="lb-btn" onclick="setLang(this,'Hindi')">हिन्दी</button>
+  <button class="lb-btn" onclick="setLang(this,'Tamil')">தமிழ்</button>
+  <button class="lb-btn" onclick="setLang(this,'Telugu')">తెలుగు</button>
+  <button class="lb-btn" onclick="setLang(this,'Kannada')">ಕನ್ನಡ</button>
+  <button class="lb-btn" onclick="setLang(this,'Bengali')">বাংলা</button>
+  <button class="lb-btn" onclick="setLang(this,'Marathi')">मराठी</button>
+  <button class="lb-btn" onclick="setLang(this,'Gujarati')">ગુજરાતી</button>
+  <button class="lb-btn" onclick="setLang(this,'Punjabi')">ਪੰਜਾਬੀ</button>
+  <button class="lb-btn" onclick="setLang(this,'Malayalam')">മലയാളം</button>
+  <button class="lb-btn" onclick="setLang(this,'Odia')">ଓଡ଼ିଆ</button>
+  <button class="lb-btn" onclick="setLang(this,'Assamese')">অসমীয়া</button>
+  <button class="lb-btn" onclick="setLang(this,'Manipuri')">মৈতৈলোন্</button>
+  <button class="lb-btn" onclick="setLang(this,'Sanskrit')">संस्कृतम्</button>
+</div>
+
+<!-- API Key Section -->
+
+
+<!-- HERO -->
+<section class="hero" id="ask">
+  <div class="hero-pattern"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-om">ॐ</div>
+    <div class="hero-devanagari">अमृतसेतु</div>
+    <h1 class="hero-title">Amrit<span>Setu</span></h1>
+    <p class="hero-subtitle">The nectar of ancient Hindu wisdom for your modern life.<br>Ask anything from the scriptures. Get answers with real shlokas, true meaning, and life examples.</p>
+
+    <div class="hero-langs" id="heroLangs">
+      <span class="lang-pill active" onclick="setLangPill(this,'English')">English</span>
+      <span class="lang-pill" onclick="setLangPill(this,'Hindi')">हिन्दी</span>
+      <span class="lang-pill" onclick="setLangPill(this,'Tamil')">தமிழ்</span>
+      <span class="lang-pill" onclick="setLangPill(this,'Telugu')">తెలుగు</span>
+      <span class="lang-pill" onclick="setLangPill(this,'Kannada')">ಕನ್ನಡ</span>
+      <span class="lang-pill" onclick="setLangPill(this,'Bengali')">বাংলা</span>
+      <span class="lang-pill" onclick="setLangPill(this,'Marathi')">मराठी</span>
+    </div>
+
+    <div class="hero-search">
+      <div class="search-input-wrap">
+        <textarea id="qInput" class="hero-textarea" placeholder="Type your question in English or any language — select your language above for the answer"></textarea>
+        <button class="hero-ask-btn" id="askBtn" onclick="ask()">Ask ↗</button>
+      </div>
+      <div class="loading" id="loadingSpinner" style="margin-top:10px">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <span id="loadingText">Seeking wisdom from the scriptures…</span>
+      </div>
+      <div class="answer-wrap" id="answerWrap">
+        <div class="answer-card">
+          <div class="answer-head">
+            <span style="color:var(--saffron);font-size:18px">ॐ</span>
+            <span class="answer-head-text">Wisdom from the Scriptures</span>
+          </div>
+          <div class="answer-body" id="answerBody"></div>
+        </div>
+      </div>
+      <div style="margin-top:12px">
+        <div style="font-size:12px;color:rgba(212,169,122,0.5);margin-bottom:8px;text-align:center">Try one of these questions or ask your own:</div>
+        <div class="sample-qs" id="sampleQs"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Scriptures</div></div>
+  <div class="stat"><div class="stat-num">15</div><div class="stat-label">Indian Languages</div></div>
+  <div class="stat"><div class="stat-num">200000+</div><div class="stat-label">Verses indexed</div></div>
+  <div class="stat"><div class="stat-num">∞</div><div class="stat-label">Questions answered</div></div>
+</div>
+
+<!-- SCRIPTURES -->
+<section class="section" id="scriptures">
+  <div class="section-inner">
+    <h2 class="section-title">Our Scripture Library</h2>
+    <p class="section-sub">Authentic editions from the most trusted sources — Gita Press, Motilal Banarsidass, Ramakrishna Mission and more</p>
+    <div class="scriptures-grid">
+      <div class="scripture-card"><div class="sc-icon">📖</div><div class="sc-name">Bhagavad Gita</div><div class="sc-desc">Prabhupada & Sivananda editions — 700 verses, 18 chapters</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+      <div class="scripture-card"><div class="sc-icon">🕉️</div><div class="sc-name">108 Upanishads</div><div class="sc-desc">All 3 volumes — Pt. Shriram Sharma Acharya</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+      <div class="scripture-card"><div class="sc-icon">📜</div><div class="sc-name">Srimad Bhagavatam</div><div class="sc-desc">All 12 Cantos — GRETIL Sanskrit + Prabhupada English</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+      <div class="scripture-card"><div class="sc-icon">🦅</div><div class="sc-name">Garuda Puran</div><div class="sc-desc">M.N. Dutt — Sanskrit + English, 1120 pages</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+      <div class="scripture-card"><div class="sc-icon">🌸</div><div class="sc-name">Padma Puran</div><div class="sc-desc">Gita Press Hindi edition, 1018 pages</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+      <div class="scripture-card"><div class="sc-icon">🔱</div><div class="sc-name">Vishnu Puran</div><div class="sc-desc">Sanskrit + English OCR edition, 671 pages</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+      <div class="scripture-card"><div class="sc-icon">🌺</div><div class="sc-name">Devi Bhagavatam</div><div class="sc-desc">Swami Vijnanananda — complete 12 books</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+      <div class="scripture-card"><div class="sc-icon">⚖️</div><div class="sc-name">Manusmriti</div><div class="sc-desc">G. Bühler English translation, scholarly edition</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+      <div class="scripture-card"><div class="sc-icon">🕊️</div><div class="sc-name">Shiva Puran</div><div class="sc-desc">Gita Press — Sanskrit + Hindi Vyakhya, both parts, 2,193 pages</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+      <div class="scripture-card"><div class="sc-icon">📚</div><div class="sc-name">Rigveda</div><div class="sc-desc">GRETIL Sanskrit + Griffith English — complete 10 Mandalas</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+      <div class="scripture-card"><div class="sc-icon">🎵</div><div class="sc-name">Samaveda</div><div class="sc-desc">GRETIL Sanskrit — complete 1875 verses</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+      <div class="scripture-card"><div class="sc-icon">🔥</div><div class="sc-name">Yajurveda</div><div class="sc-desc">Maitrayani Samhita Sanskrit — complete</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+      <div class="scripture-card"><div class="sc-icon">✨</div><div class="sc-name">Atharvaveda</div><div class="sc-desc">Dr. Tulsi Ram — Sanskrit + English, both volumes, 2428 pages</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+      <div class="scripture-card"><div class="sc-icon">🏹</div><div class="sc-name">Valmiki Ramayana</div><div class="sc-desc">Both recensions — GRETIL Sanskrit + Gita Press English, all 7 Kandas</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+      <div class="scripture-card"><div class="sc-icon">⚔️</div><div class="sc-name">Mahabharata</div><div class="sc-desc">Complete 18 Parvas — GRETIL Sanskrit + Ganguli English translation</div><span class="sc-badge sc-uploaded">✓ In Library</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how-bg" id="how">
+  <div class="section-inner">
+    <h2 class="section-title">How AmritSetu Works</h2>
+    <p class="section-sub">From your question to verified wisdom in seconds</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Ask in Your Language</div>
+        <div class="step-desc">Type any question in any of 15 Indian languages. From a simple life doubt to a deep philosophical question — ask anything.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">Scriptures Are Searched</div>
+        <div class="step-desc">Our platform searches across 14+ scriptures — from the Bhagavad Gita to the Puranas — to find the most relevant, authentic answer.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">Get the Shloka & Meaning</div>
+        <div class="step-desc">Receive the exact Sanskrit shloka with transliteration, plain language meaning in your language, and a real modern-life example.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">Verify It Yourself</div>
+        <div class="step-desc">Every answer includes direct links to free, scholarly sources so you can read the original scripture and verify every word yourself.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <h2 class="section-title">What Makes AmritSetu Unique</h2>
+    <p class="section-sub">No other platform combines all of these together</p>
+    <div class="features">
+      <div class="feature-card"><div class="feat-icon">🌐</div><div class="feat-title">15 Indian Languages</div><div class="feat-desc">Ask and receive answers in Hindi, Tamil, Telugu, Kannada, Bengali, Marathi, Gujarati, Punjabi, Malayalam, Odia, Assamese, Manipuri, Urdu, Sanskrit and English.</div></div>
+      <div class="feature-card"><div class="feat-icon">📖</div><div class="feat-title">Multi-Scripture Coverage</div><div class="feat-desc">Not just the Gita — we cover 14+ scriptures including all Puranas, Upanishads, Vedas, Ramayana and Mahabharata in one platform.</div></div>
+      <div class="feature-card"><div class="feat-icon">✅</div><div class="feat-title">Verify It Yourself</div><div class="feat-desc">Every answer links to free, scholarly sources. We never ask you to trust us blindly — read the original Sanskrit yourself and verify every citation.</div></div>
+      <div class="feature-card"><div class="feat-icon">🎓</div><div class="feat-title">17 Commentaries on Gita</div><div class="feat-desc">For every Gita verse, see all 17 commentaries side by side — Shankaracharya, Prabhupada, Gambhirananda, Sri Aurobindo and more — via IIT Kanpur.</div></div>
+      <div class="feature-card"><div class="feat-icon">🌱</div><div class="feat-title">Modern Life Examples</div><div class="feat-desc">Every answer includes a real example from today's India — office situations, family moments, social media, relationships — showing how ancient wisdom applies now.</div></div>
+      <div class="feature-card"><div class="feat-icon">⚖️</div><div class="feat-title">Honest & Unbiased</div><div class="feat-desc">No religious sect. No political agenda. We present multiple scholarly perspectives, honest historical context, and let you decide what resonates.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LANGUAGES -->
+<section class="section" style="background:var(--brown);padding:4rem 2rem" id="languages">
+  <div class="section-inner">
+    <h2 class="section-title" style="color:#fff">Available in Every Indian Language</h2>
+    <p class="section-sub" style="color:#d4a97a">Ask your question in the language of your heart</p>
+    <div class="lang-grid">
+      <div class="lang-card"><div class="lang-native">हिन्दी</div><div class="lang-english">Hindi</div></div>
+      <div class="lang-card"><div class="lang-native">தமிழ்</div><div class="lang-english">Tamil</div></div>
+      <div class="lang-card"><div class="lang-native">తెలుగు</div><div class="lang-english">Telugu</div></div>
+      <div class="lang-card"><div class="lang-native">ಕನ್ನಡ</div><div class="lang-english">Kannada</div></div>
+      <div class="lang-card"><div class="lang-native">বাংলা</div><div class="lang-english">Bengali</div></div>
+      <div class="lang-card"><div class="lang-native">मराठी</div><div class="lang-english">Marathi</div></div>
+      <div class="lang-card"><div class="lang-native">ગુજરાતી</div><div class="lang-english">Gujarati</div></div>
+      <div class="lang-card"><div class="lang-native">ਪੰਜਾਬੀ</div><div class="lang-english">Punjabi</div></div>
+      <div class="lang-card"><div class="lang-native">മലയാളം</div><div class="lang-english">Malayalam</div></div>
+      <div class="lang-card"><div class="lang-native">ଓଡ଼ିଆ</div><div class="lang-english">Odia</div></div>
+      <div class="lang-card"><div class="lang-native">অসমীয়া</div><div class="lang-english">Assamese</div></div>
+      <div class="lang-card"><div class="lang-native">मৈতৈলোন্</div><div class="lang-english">Manipuri</div></div>
+      <div class="lang-card"><div class="lang-native">संस्कृतम्</div><div class="lang-english">Sanskrit</div></div>
+      <div class="lang-card"><div class="lang-native">English</div><div class="lang-english">English</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonial-bg">
+  <div class="section-inner">
+    <h2 class="section-title">What People Are Saying</h2>
+    <p class="section-sub">From students to scholars — AmritSetu speaks to everyone</p>
+    <div class="testimonials">
+      <div class="testi">
+        <div class="testi-text">"I asked about Karma and got the actual shloka from the Gita with a link to verify it. No other app does this. My father and I read it together."</div>
+        <div class="testi-author">Priya Sharma, 24 — Software Engineer, Bengaluru</div>
+      </div>
+      <div class="testi">
+        <div class="testi-text">"मैंने हिंदी में पूछा और जवाब भी हिंदी में मिला। श्लोक के साथ उसका अर्थ और आज की ज़िंदगी से जोड़कर समझाया। अद्भुत!"</div>
+        <div class="testi-author">Ramesh Gupta, 58 — Teacher, Varanasi</div>
+      </div>
+      <div class="testi">
+        <div class="testi-text">"As a researcher of Hindu philosophy, I was impressed that AmritSetu cites exact chapter and verse, gives multiple scholarly perspectives, and links to primary sources."</div>
+        <div class="testi-author">Dr. Meenakshi Iyer — Sanskrit Scholar, Chennai</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDITS -->
+<section class="section" id="credits" style="background:var(--parchment)">
+  <div class="section-inner">
+    <h2 class="section-title">Credits & Acknowledgements</h2>
+    <p class="section-sub">AmritSetu is built on the shoulders of giants. We gratefully acknowledge these extraordinary sources that make authentic scripture access possible for everyone.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-bottom:2rem">
+
+      <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem">
+        <div style="font-family:'Cinzel',serif;font-size:14px;color:var(--brown);margin-bottom:8px">🎓 IIT Kanpur — Gita Supersite</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:10px">The extraordinary multi-commentary Bhagavad Gita resource with 17 scholarly commentaries side by side. Built by the Indian Institute of Technology Kanpur — a gift to humanity.</div>
+        <a href="https://www.gitasupersite.iitk.ac.in" target="_blank" style="font-size:12px;color:var(--saffron);text-decoration:none;font-family:'Cinzel',serif">Visit gitasupersite.iitk.ac.in ↗</a>
+      </div>
+
+      <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem">
+        <div style="font-family:'Cinzel',serif;font-size:14px;color:var(--brown);margin-bottom:8px">📚 Sacred Texts Archive</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:10px">Since 1999, sacred-texts.com has preserved ancient scriptures from every tradition freely for all of humanity. An invaluable scholarly resource for Vedas, Upanishads, Manusmriti and more.</div>
+        <a href="https://sacred-texts.com/hin/index.htm" target="_blank" style="font-size:12px;color:var(--saffron);text-decoration:none;font-family:'Cinzel',serif">Visit sacred-texts.com ↗</a>
+      </div>
+
+      <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem">
+        <div style="font-family:'Cinzel',serif;font-size:14px;color:var(--brown);margin-bottom:8px">📖 Wisdomlib</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:10px">Wisdomlib.org provides verse-by-verse scholarly translations with Sanskrit, transliteration and commentary for all major Puranas and Hindu texts. An outstanding free resource for serious students.</div>
+        <a href="https://www.wisdomlib.org/hinduism" target="_blank" style="font-size:12px;color:var(--saffron);text-decoration:none;font-family:'Cinzel',serif">Visit wisdomlib.org ↗</a>
+      </div>
+
+      <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem">
+        <div style="font-family:'Cinzel',serif;font-size:14px;color:var(--brown);margin-bottom:8px">🕉️ Vedabase — Bhaktivedanta Book Trust</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:10px">Srila Prabhupada's translations of the Bhagavad Gita As It Is and Srimad Bhagavatam — among the most widely read scripture translations in the world. Published by the Bhaktivedanta Book Trust.</div>
+        <a href="https://vedabase.io/en/library/sb" target="_blank" style="font-size:12px;color:var(--saffron);text-decoration:none;font-family:'Cinzel',serif">Visit vedabase.io ↗</a>
+      </div>
+
+      <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem">
+        <div style="font-family:'Cinzel',serif;font-size:14px;color:var(--brown);margin-bottom:8px">🏛️ Gita Press, Gorakhpur</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:10px">Since 1923, Gita Press has published authentic Sanskrit editions of all major Hindu scriptures at the lowest possible cost for the benefit of all. Their Shiva Purana and Padma Purana editions are in our library.</div>
+        <a href="https://www.gitapress.org" target="_blank" style="font-size:12px;color:var(--saffron);text-decoration:none;font-family:'Cinzel',serif">Visit gitapress.org ↗</a>
+      </div>
+
+      <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem">
+        <div style="font-family:'Cinzel',serif;font-size:14px;color:var(--brown);margin-bottom:8px">🌟 AWGP — Pt. Shriram Sharma Acharya</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:10px">The Akhand Jyoti Sansthan and AWGP preserve Pt. Shriram Sharma Acharya's complete works including his landmark Hindi translations of all 108 Upanishads — the backbone of our Upanishad library.</div>
+        <a href="https://www.awgp.org" target="_blank" style="font-size:12px;color:var(--saffron);text-decoration:none;font-family:'Cinzel',serif">Visit awgp.org ↗</a>
+      </div>
+
+      <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem">
+        <div style="font-family:'Cinzel',serif;font-size:14px;color:var(--brown);margin-bottom:8px">🏹 Valmiki Ramayana</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:10px">Valmikiramayan.net provides the complete original Sanskrit Valmiki Ramayana with transliteration and English translation — making the world's oldest epic accessible to all.</div>
+        <a href="https://www.valmikiramayan.net" target="_blank" style="font-size:12px;color:var(--saffron);text-decoration:none;font-family:'Cinzel',serif">Visit valmikiramayan.net ↗</a>
+      </div>
+
+      <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem">
+        <div style="font-family:'Cinzel',serif;font-size:14px;color:var(--brown);margin-bottom:8px">🌐 Internet Archive</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:10px">Archive.org has preserved thousands of out-of-print and rare scripture editions freely for the world. Many of the scholarly translations in our library were sourced from this invaluable digital archive.</div>
+        <a href="https://archive.org" target="_blank" style="font-size:12px;color:var(--saffron);text-decoration:none;font-family:'Cinzel',serif">Visit archive.org ↗</a>
+      </div>
+
+    </div>
+
+    <div style="background:var(--saffron-light);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center">
+      <div style="font-family:'Cinzel',serif;font-size:14px;color:var(--brown);margin-bottom:10px">Our Commitment to Authenticity</div>
+      <div style="font-size:14px;color:var(--text-muted);line-height:1.8;max-width:600px;margin:0 auto">
+        AmritSetu does not reproduce copyrighted text. All answers are original explanations inspired by scripture. 
+        Every answer directs readers to primary sources for verification. 
+        We are a bridge — not a replacement — for the original scriptures.
+        <br><br>
+        <em style="color:var(--saffron)">"We stand on the shoulders of every scholar, translator and publisher who devoted their life to preserving Hindu wisdom for future generations."</em>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 class="cta-title">The Nectar is Ready.<br>Your Journey Begins Now.</h2>
+  <p class="cta-sub">Ask your first question in the language of your heart</p>
+  <button class="cta-btn" onclick="document.getElementById('ask').scrollIntoView({behavior:'smooth'})">Ask the Scriptures ↗</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-name">Amrit<span>Setu</span> <span style="font-size:14px;color:var(--saffron)">अमृतसेतु</span></div>
+        <p>The nectar of ancient Hindu wisdom for modern life. Authentic, unbiased, verified — in every Indian language.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Scriptures</h4>
+        <a href="#">Bhagavad Gita</a>
+        <a href="#">Upanishads</a>
+        <a href="#">Puranas</a>
+        <a href="#">Vedas</a>
+        <a href="#">Manusmriti</a>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="#">How it works</a>
+        <a href="#">Languages</a>
+        <a href="#">Verify sources</a>
+        <a href="#">About us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="#">@AmritSetu</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 AmritSetu. Dedicated to the authentic preservation and sharing of Hindu wisdom.</p>
+      <span class="footer-om">ॐ</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const IIT=['Shankaracharya','Ramanuja','Madhvacharya','Vallabhacharya','Prabhupada','Gambhirananda','Sivananda','Chinmayananda','Tilak','Sri Aurobindo','Vinoba Bhave','Ramsukhdas','Tejomayananda','Adidevananda','Paramarthananda','Baladeva Vidyabhushana','Jiva Goswami'];
+const SAMPLES={
+  English:[
+    "According to the Bhagavad Gita, what should a husband and wife do to have a happy marriage?",
+    "I am dealing with stress and anxiety at work. What does the Gita say about this?",
+    "What is Karma and how does it affect my daily life with real examples?",
+    "I feel lost and disconnected from God. What do the scriptures say?",
+    "What does the Bhagavatam say about the purpose of human life?"
+  ],
+  Hindi:[
+    "भगवद गीता के अनुसार पति-पत्नी के बीच अच्छे सम्बन्ध के लिए क्या करना चाहिए?",
+    "काम में तनाव और चिंता है। गीता इसके बारे में क्या कहती है?",
+    "कर्म क्या है और यह मेरे रोज़ के जीवन में कैसे काम करता है?",
+    "मैं जीवन में खोया हुआ महसूस करता हूँ। शास्त्र क्या कहते हैं?",
+    "मोक्ष क्या है और क्या इसे इस जन्म में पाया जा सकता है?"
+  ],
+  Tamil:[
+    "பகவத் கீதையின்படி கணவன் மனைவி உறவு எப்படி இருக்க வேண்டும்?",
+    "வேலையில் மன அழுத்தம் இருக்கிறது. கீதை என்ன சொல்கிறது?",
+    "கர்மா என்றால் என்ன? அது என் வாழ்வில் எப்படி செயல்படுகிறது?"
+  ],
+  Telugu:[
+    "భగవద్గీత ప్రకారం భార్యాభర్తల మధ్య మంచి సంబంధం ఎలా ఉండాలి?",
+    "పని ఒత్తిడిని గీత ఎలా అధిగమించమని చెప్తుంది?",
+    "కర్మ అంటే ఏమిటి? అది నా జీవితంలో ఎలా పనిచేస్తుంది?"
+  ],
+  Kannada:[
+    "ಭಗವದ್ಗೀತೆಯ ಪ್ರಕಾರ ಪತಿ-ಪತ್ನಿ ಸಂಬಂಧ ಹೇಗಿರಬೇಕು?",
+    "ಕೆಲಸದಲ್ಲಿ ಒತ್ತಡ ಇದೆ. ಗೀತೆ ಏನು ಹೇಳುತ್ತದೆ?",
+    "ಕರ್ಮ ಎಂದರೇನು? ಅದು ನನ್ನ ಜೀವನದಲ್ಲಿ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ?"
+  ],
+  Bengali:[
+    "ভগবদ গীতা অনুযায়ী স্বামী-স্ত্রীর সম্পর্ক কেমন হওয়া উচিত?",
+    "কাজে মানসিক চাপ আছে। গীতা কী বলে?",
+    "কর্ম কী এবং এটি আমার জীবনে কীভাবে কাজ করে?"
+  ],
+  Marathi:[
+    "भगवद्गीतेनुसार पती-पत्नीचे नाते कसे असावे?",
+    "कामात ताण आहे. गीता काय सांगते?",
+    "कर्म म्हणजे काय? ते माझ्या आयुष्यात कसे काम करते?"
+  ]
+};
+const SPIN={
+  English:"Seeking wisdom from the scriptures…",Hindi:"शास्त्रों से ज्ञान खोज रहे हैं…",
+  Tamil:"வேதங்களிலிருந்து ஞானம் தேடுகிறோம்…",Telugu:"శాస్త్రాల నుండి జ్ఞానాన్ని వెతుకుతున్నాం…",
+  Kannada:"ಶಾಸ್ತ್ರಗಳಿಂದ ಜ್ಞಾನ ಹುಡುಕುತ್ತಿದ್ದೇವೆ…",Bengali:"শাস্ত্র থেকে জ্ঞান খোঁজা হচ্ছে…",
+  Marathi:"शास्त्रांमधून ज्ञान शोधत आहोत…"
+};
+let lang='English';
+let apiKey=localStorage.getItem('ds_key')||'';
+let history=JSON.parse(localStorage.getItem('ds_hist')||'[]');
+
+// Backend on Render handles API key securely
+
+window.onload=()=>{
+  // Ready to use
+  if(apiKey){
+    document.getElementById('apiKeyInput').value=apiKey;
+    document.getElementById('apiStatus').textContent='✓ Ready';
+    document.getElementById('apiStatus').className='api-status ok';
+  }
+  renderSamples();
+  document.getElementById('qInput').addEventListener('keydown',e=>{
+    if(e.key==='Enter'&&(e.ctrlKey||e.metaKey)) ask();
+  });
+};
+
+function toggleMenu(){
+  const nl=document.querySelector('.nav-links');
+  nl.style.display=nl.style.display==='flex'?'none':'flex';
+  nl.style.flexDirection='column';
+  nl.style.position='absolute';
+  nl.style.top='64px';nl.style.right='0';
+  nl.style.background='#2D1B0E';
+  nl.style.padding='1rem';
+  nl.style.borderRadius='0 0 10px 10px';
+}
+
+function setLang(btn,l){
+  document.querySelectorAll('.lb-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  lang=l;
+  document.getElementById('loadingText').textContent=SPIN[l]||SPIN.English;
+  const ph={Hindi:'अपना प्रश्न यहाँ लिखें…',Tamil:'உங்கள் கேள்வியை இங்கே தட்டச்சு செய்யுங்கள்…',Telugu:'మీ ప్రశ్నను ఇక్కడ టైప్ చేయండి…',Kannada:'ನಿಮ್ಮ ಪ್ರಶ್ನೆಯನ್ನು ಇಲ್ಲಿ ಟೈಪ್ ಮಾಡಿ…',Bengali:'আপনার প্রশ্ন এখানে লিখুন…',Marathi:'तुमचा प्रश्न इथे लिहा…'};
+  document.getElementById('qInput').placeholder=ph[l]||'Type your question in English or any language — select your language above for the answer';
+  // sync hero lang pills
+  document.querySelectorAll('.lang-pill').forEach(p=>{
+    p.classList.toggle('active',p.onclick&&p.onclick.toString().includes(`'${l}'`));
+  });
+  renderSamples();
+}
+
+function setLangPill(pill,l){
+  document.querySelectorAll('.lang-pill').forEach(p=>p.classList.remove('active'));
+  pill.classList.add('active');
+  lang=l;
+  document.getElementById('loadingText').textContent=SPIN[l]||SPIN.English;
+  renderSamples();
+}
+
+function renderSamples(){
+  const qs=SAMPLES[lang]||SAMPLES.English;
+  document.getElementById('sampleQs').innerHTML=qs.map(q=>
+    `<button class="sample-q" onclick="setQ('${q.replace(/'/g,"&#39;")}')">${q.length>48?q.slice(0,48)+'…':q}</button>`
+  ).join('');
+}
+
+function setQ(t){
+  document.getElementById('qInput').value=t;
+  document.getElementById('qInput').focus();
+  document.getElementById('ask').scrollIntoView({behavior:'smooth'});
+}
+
+function saveKey(){
+  const v=document.getElementById('apiKeyInput').value.trim();
+  if(!v.startsWith('sk-ant')){
+    document.getElementById('apiStatus').textContent='✗ Invalid key';
+    document.getElementById('apiStatus').className='api-status err';
+    return;
+  }
+  apiKey=v;localStorage.setItem('ds_key',v);
+  document.getElementById('apiStatus').textContent='✓ Ready';
+  document.getElementById('apiStatus').className='api-status ok';
+  document.getElementById('apiSection').style.display='none';
+}
+
+function buildPrompt(){
+  return `You are a Hindu scripture scholar for AmritSetu.
+
+Library: 108 Upanishads (Pt. Shriram Sharma Acharya), Srimad Bhagavatam all 12 Cantos (Sanskrit GRETIL + Prabhupada English), Bhagavad Gita (Prabhupada and Sivananda), Vishnu Purana, Manusmriti (Buhler), Devi Bhagavatam (Vijnanananda), Garuda Purana (M.N.Dutt), Padma Purana (Gita Press), Shiva Purana both parts (Gita Press), Valmiki Ramayana both recensions (GRETIL Sanskrit + Gita Press English), Mahabharata complete 18 Parvas (GRETIL Sanskrit + Ganguli English), all 4 Vedas (Rigveda GRETIL + Griffith, Samaveda GRETIL, Yajurveda Maitrayani, Atharvaveda Tulsi Ram).
+
+MANUSMRITI RULE: Always mention that many controversial verses are later interpolations and quote Vivekananda.
+
+The user is asking in ${lang}. You MUST respond in valid JSON only. No text before or after the JSON.
+
+Return this exact JSON structure:
+{
+  "shloka_sanskrit": "original Sanskrit verse here",
+  "shloka_transliteration": "Roman script pronunciation here",
+  "shloka_translation": "translation in ${lang} here",
+  "source_scripture": "exact scripture name in English e.g. Bhagavad Gita or Srimad Bhagavatam",
+  "source_chapter": "chapter number as integer e.g. 2",
+  "source_verse": "verse number as integer e.g. 47",
+  "source_canto": "canto number if Bhagavatam e.g. 1 otherwise empty string",
+  "meaning": "2-3 paragraphs explaining the shloka in ${lang}. Simple warm language. Explain Sanskrit terms. Mention if Shankaracharya, Prabhupada or Ramanuja interpret differently. Separate paragraphs with \n\n",
+  "modern_example": "one specific real modern example from India today in ${lang}. Show how the shloka applies to a real office, family, student or relationship situation",
+  "manusmriti_context": "if source is Manusmriti write the scholarly disclaimer in ${lang} mentioning Patrick Olivelle and Vivekananda, otherwise empty string",
+  "sources_cited": "list all references as: Scripture | Chapter X | Verse Y | description, one per line"
+}
+
+RULES:
+- shloka_sanskrit must always have a real Sanskrit verse
+- source_scripture must always be in English
+- source_chapter and source_verse must always be numbers
+- meaning must always have 2-3 full paragraphs in ${lang}
+- modern_example must always be a specific real situation in ${lang}
+- Return ONLY the JSON — no markdown, no backticks, no explanation`;
+}
+
+function renderAnswer(text, container){
+  let data;
+  
+  // Parse JSON response — handle all possible formats
+  try {
+    // Remove markdown code fences if present
+    let cleaned = text.trim();
+    cleaned = cleaned.replace(/^```json\s*/i, '').replace(/^```\s*/i, '');
+    cleaned = cleaned.replace(/\s*```$/i, '');
+    cleaned = cleaned.trim();
+    
+    // Find JSON object if there is extra text around it
+    const jsonStart = cleaned.indexOf('{');
+    const jsonEnd = cleaned.lastIndexOf('}');
+    if(jsonStart >= 0 && jsonEnd > jsonStart){
+      cleaned = cleaned.substring(jsonStart, jsonEnd + 1);
+    }
+    
+    data = JSON.parse(cleaned);
+  } catch(e) {
+    // JSON parsing failed — show raw text nicely formatted
+    const paras = text.split(/\n\n+/).filter(p=>p.trim()).map(p=>`<p>${p.trim()}</p>`).join('');
+    container.innerHTML = `<div class="meaning-text">${paras || '<p>' + text + '</p>'}</div>
+      <div class="verify-block">
+        <div class="verify-label">✓ Explore the Scriptures</div>
+        <a href="https://www.wisdomlib.org/hinduism" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:rgba(46,125,50,0.15);border:1px solid rgba(46,125,50,0.4);border-radius:8px;color:#81c784;text-decoration:none;font-size:13px;font-family:'Cinzel',serif;margin-bottom:8px">
+          📖 Hindu Scripture Library ↗
+        </a>
+      </div>`;
+    return;
+  }
+
+  const ch = data.source_chapter || '';
+  const vs = data.source_verse || '';
+  const ca = data.source_canto || '';
+  const scripture = (data.source_scripture || '').toLowerCase();
+  
+  const isGita = scripture.includes('bhagavad gita') || scripture.includes('bhagavad-gita');
+  const isBhagavatam = scripture.includes('bhagavatam') && !scripture.includes('devi');
+  const isManu = scripture.includes('manusmriti') || scripture.includes('manu');
+  const isUpanishad = scripture.includes('upanishad');
+  const isRamayana = scripture.includes('ramayana');
+  const isMahabharata = scripture.includes('mahabharata');
+  const isVishnu = scripture.includes('vishnu');
+  const isGaruda = scripture.includes('garuda');
+  const isShiva = scripture.includes('shiva');
+  const isDevi = scripture.includes('devi');
+  const isPadma = scripture.includes('padma');
+
+  let html = '';
+
+  // SHLOKA BLOCK
+  if(data.shloka_sanskrit){
+    const sourceLabel = data.source_scripture + (ch ? ` | Chapter ${ch}` : '') + (ca ? ` | Canto ${ca}` : '') + (vs ? ` | Verse ${vs}` : '');
+    html += `<div class="verse-block">
+      <div class="verse-text">
+        ${data.shloka_sanskrit}<br>
+        <em style="font-size:13px">${data.shloka_transliteration || ''}</em><br><br>
+        "${data.shloka_translation || ''}"
+      </div>
+      <div class="verse-source">Source: ${sourceLabel}</div>
+    </div>`;
+  }
+
+  // MEANING BLOCK
+  if(data.meaning){
+    const paras = data.meaning.split(/\n\n+/).map(p=>`<p>${p.trim()}</p>`).join('');
+    html += `<div class="meaning-text">${paras}</div>`;
+  }
+
+  // HOW YOU CAN RELATE BLOCK
+  if(data.modern_example){
+    html += `<div class="relate-block">
+      <div class="relate-label">How You Can Relate Today</div>
+      <div class="relate-text">${data.modern_example.replace(/\n\n/g,'<br><br>')}</div>
+    </div>`;
+  }
+
+  // MANUSMRITI DISCLAIMER
+  if(isManu && data.manusmriti_context){
+    html += `<div style="background:rgba(255,193,7,0.08);border:1px solid rgba(255,193,7,0.25);border-radius:10px;padding:14px 16px;margin-bottom:1rem">
+      <div style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:1px;color:#ffd54f;text-transform:uppercase;margin-bottom:8px">📜 Important Scholarly Context — Manusmriti</div>
+      <div style="font-size:13px;line-height:1.8;color:#ffe082">${data.manusmriti_context}</div>
+    </div>`;
+  }
+
+  // IIT KANPUR — only for Gita
+  if(isGita && ch && vs){
+    const url = `https://www.gitasupersite.iitk.ac.in/srimad?language=dv&field_chapter_value=${ch}&field_nsutra_value=${vs}&scr=1&scg=1&scba=1&scbe=1&choose=1`;
+    const IIT=['Shankaracharya','Ramanuja','Madhvacharya','Vallabhacharya','Prabhupada','Gambhirananda','Sivananda','Chinmayananda','Tilak','Sri Aurobindo','Vinoba Bhave','Ramsukhdas','Tejomayananda','Adidevananda','Paramarthananda','Baladeva Vidyabhushana','Jiva Goswami'];
+    html += `<div class="iit-block">
+      <div class="iit-label">🎓 IIT Kanpur — Read Chapter ${ch}, Verse ${vs} With All 17 Commentaries</div>
+      <div style="margin-bottom:8px"><a href="${url}" target="_blank" style="display:inline-block;padding:7px 14px;background:#1565c0;color:#fff;border-radius:6px;font-size:12px;text-decoration:none;font-family:'Cinzel',serif">Open on IIT Kanpur ↗</a></div>
+      <div class="iit-grid">${IIT.map(c=>`<button class="iit-btn" onclick="window.open('${url}','_blank')">${c}</button>`).join('')}</div>
+    </div>`;
+  }
+
+  // VERIFY SINGLE SMART LINK
+  let vLabel='', vUrl='', vNote='';
+  if(isGita){
+    vUrl = ch&&vs ? `https://www.gitasupersite.iitk.ac.in/srimad?language=dv&field_chapter_value=${ch}&field_nsutra_value=${vs}&scr=1&scg=1&choose=1` : 'https://www.gitasupersite.iitk.ac.in';
+    vLabel = ch&&vs ? `Bhagavad Gita — Chapter ${ch}, Verse ${vs}` : 'Bhagavad Gita';
+    vNote = 'IIT Kanpur — 17 scholarly commentaries on this exact verse. 100% free.';
+  } else if(isBhagavatam){
+    vUrl = ca&&ch&&vs ? `https://vedabase.io/en/library/sb/${ca}/${ch}/${vs}/` : 'https://vedabase.io/en/library/sb/';
+    vLabel = ca&&ch&&vs ? `Srimad Bhagavatam — Canto ${ca}, Chapter ${ch}, Verse ${vs}` : 'Srimad Bhagavatam';
+    vNote = 'Vedabase — Sanskrit, transliteration and Prabhupada commentary. Free.';
+  } else if(isManu){
+    vLabel = ch&&vs ? `Manusmriti — Chapter ${ch}, Verse ${vs}` : 'Manusmriti';
+    vUrl = 'https://sacred-texts.com/hin/manu.htm';
+    vNote = 'Sacred Texts Archive — Free complete Bühler translation. No signup required.';
+  } else if(isUpanishad){
+    vLabel='Upanishads — Sacred Texts Archive'; vUrl='https://sacred-texts.com/hin/upan/index.htm';
+    vNote='Free scholarly translations of all major Upanishads.';
+  } else if(isRamayana){
+    vLabel='Valmiki Ramayana'; vUrl='https://www.valmikiramayan.net';
+    vNote='Original Sanskrit with transliteration and English. Free.';
+  } else if(isMahabharata){
+    // Wisdomlib direct Parva URLs — all free to read online
+    const parvaUrls = {
+      '1':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc575359.html',
+      '2':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc575578.html',
+      '3':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc575718.html',
+      '4':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc825553.html',
+      '5':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc825603.html',
+      '6':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc825660.html',
+      '7':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc825737.html',
+      '8':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc825834.html',
+      '9':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc825855.html',
+      '10':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc825868.html',
+      '11':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc825878.html',
+      '12':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc825955.html',
+      '13':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc826289.html',
+      '14':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc826418.html',
+      '15':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc826443.html',
+      '16':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc826454.html',
+      '17':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc826459.html',
+      '18':'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan/d/doc826462.html'
+    };
+    const parvaDisplay = {
+      '1':'Adi Parva','2':'Sabha Parva','3':'Vana Parva','4':'Virata Parva',
+      '5':'Udyoga Parva','6':'Bhishma Parva','7':'Drona Parva','8':'Karna Parva',
+      '9':'Shalya Parva','10':'Sauptika Parva','11':'Stri Parva','12':'Shanti Parva',
+      '13':'Anushasana Parva','14':'Ashvamedha Parva','15':'Ashramavasika Parva',
+      '16':'Mausala Parva','17':'Mahaprasthanika Parva','18':'Svargarohana Parva'
+    };
+    const parvaName = ch && parvaDisplay[ch] ? parvaDisplay[ch] : '';
+    vUrl = ch && parvaUrls[ch] ? parvaUrls[ch] : 'https://www.wisdomlib.org/hinduism/book/the-mahabharata-mohan';
+    vLabel = parvaName ? `Mahabharata — ${parvaName}` : 'Mahabharata — Ganguli Translation';
+    vNote = 'Wisdomlib — free to read online, no purchase needed. Opens at the correct Parva.';
+  } else if(isGaruda){
+    vLabel='Garuda Purana'; vUrl='https://sacred-texts.com/hin/gpu/index.htm';
+    vNote='Sacred Texts Archive — M.N. Dutt translation. Free, no purchase required.';
+    vNote='M.N. Dutt translation — Sanskrit and English. Free.';
+  } else if(isShiva){
+    vLabel='Shiva Purana'; vUrl='https://www.wisdomlib.org/hinduism/book/shiva-purana-english';
+    vNote='Complete Shiva Purana. Free.';
+  } else if(isDevi){
+    vLabel='Devi Bhagavatam'; vUrl='https://www.wisdomlib.org/hinduism/book/devi-bhagavata-purana';
+    vNote='Swami Vijnanananda translation. Free.';
+  } else if(isPadma){
+    vLabel='Padma Purana'; vUrl='https://www.wisdomlib.org/hinduism/book/the-padma-purana';
+    vNote='Complete Padma Purana. Free.';
+  } else if(isVishnu){
+    vLabel='Vishnu Purana'; vUrl='https://sacred-texts.com/hin/vp/index.htm';
+    vNote='H.H. Wilson translation. Free.';
+  } else {
+    vLabel='Hindu Scripture Library'; vUrl='https://www.wisdomlib.org/hinduism';
+    vNote='Free scholarly sources for all Hindu scriptures.';
+  }
+
+  html += `<div class="verify-block">
+    <div class="verify-label">✓ Verify This Verse Yourself — Free</div>
+    <a href="${vUrl}" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:rgba(46,125,50,0.15);border:1px solid rgba(46,125,50,0.4);border-radius:8px;color:#81c784;text-decoration:none;font-size:13px;font-family:'Cinzel',serif;margin-bottom:8px">
+      📖 ${vLabel} ↗
+    </a>
+    <div style="font-size:12px;color:#81c784;font-style:italic;margin-top:4px">${vNote}</div>
+  </div>`;
+
+  // SOURCES CITED
+  if(data.sources_cited){
+    const lines = data.sources_cited.split('\n').filter(l=>l.trim()&&l.includes('|'));
+    if(lines.length){
+      const linkedLines = lines.map(l=>{
+        const lchM=l.match(/Chapter\s*(\d+)/i); const lvsM=l.match(/Verse\s*(\d+)/i);
+        const lch=lchM?lchM[1]:''; const lvs=lvsM?lvsM[1]:'';
+        const lcaM=l.match(/Canto\s*(\d+)/i); const lca=lcaM?lcaM[1]:'';
+        let href='';
+        if(/bhagavad gita/i.test(l)&&lch&&lvs) href=`https://www.gitasupersite.iitk.ac.in/srimad?language=dv&field_chapter_value=${lch}&field_nsutra_value=${lvs}&scr=1&scg=1&choose=1`;
+        else if(/bhagavatam|srimad/i.test(l)&&lca&&lch&&lvs) href=`https://vedabase.io/en/library/sb/${lca}/${lch}/${lvs}/`;
+        else if(/manusmriti/i.test(l)) href='https://sacred-texts.com/hin/manu.htm';
+        else if(/mahabharata/i.test(l)) href='https://sacred-texts.com/hin/maha/index.htm';
+        else if(/ramayana/i.test(l)) href='https://www.valmikiramayan.net';
+        else if(/upanishad/i.test(l)) href='https://sacred-texts.com/hin/upan/index.htm';
+        const txt=l.trim().replace(/^-\s*|\*\*/g,'');
+        return href ? `<li>📖 <a href="${href}" target="_blank" style="color:#81c784;text-decoration:underline">${txt} ↗</a></li>` : `<li>📖 ${txt}</li>`;
+      }).join('');
+      html+=`<div class="refs-block"><div class="refs-label">Exact References — click to verify</div><ul class="refs-list">${linkedLines}</ul></div>`;
+    }
+  }
+
+  container.innerHTML = html;
+}
+
+function getScriptures(){
+  return 'Bhagavad Gita, 108 Upanishads, Srimad Bhagavatam, Vishnu Purana, Garuda Purana, Padma Purana, Devi Bhagavatam, Manusmriti, Shiva Purana, Ramayana, Mahabharata, Vedas';
+}
+
+async function ask(){
+  const q=document.getElementById('qInput').value.trim();
+  if(!q){alert('Please type a question first.');return;}
+  // Backend handles authentication
+  const btn=document.getElementById('askBtn');
+  const spin=document.getElementById('loadingSpinner');
+  const wrap=document.getElementById('answerWrap');
+  const body=document.getElementById('answerBody');
+  btn.disabled=true;spin.classList.add('on');wrap.classList.remove('on');
+  try{
+    // Show waking up message after 5 seconds
+    const wakeTimer = setTimeout(()=>{
+      document.getElementById('loadingText').textContent = 'Waking up the scripture server — please wait 30-60 seconds...';
+    }, 5000);
+
+    // Use Render backend — local server only works when opening file directly
+    const res = await fetch('https://dharmsetu-backend.onrender.com/ask', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({question:q, language:lang})
+    });
+
+    clearTimeout(wakeTimer);
+    document.getElementById('loadingText').textContent = 'Seeking wisdom from the scriptures…';
+
+    const data = await res.json();
+    if(data.error) throw new Error(data.error);
+    const txt = data.answer || '';
+    if(!txt) throw new Error('No answer received');
+
+    renderAnswer(txt,body);
+    wrap.classList.add('on');
+    history.push({q,lang});
+    if(history.length>20)history=history.slice(-20);
+    localStorage.setItem('ds_hist',JSON.stringify(history));
+  }catch(e){
+    body.innerHTML=`<div class="error-msg">
+  <strong>Could not get an answer.</strong><br><br>
+  ${e.message.includes('fetch') || e.message.includes('network') ?
+    '<strong>The server is waking up.</strong> Please wait 60 seconds and try again — this happens when no one has used the platform for a while.' :
+    e.message
+  }<br><br>
+  <button onclick="ask()" style="padding:8px 20px;background:#E8650A;color:#fff;border:none;border-radius:8px;font-family:Cinzel,serif;font-size:13px;cursor:pointer;margin-top:8px">
+    Try Again ↗
+  </button>
+</div>`;
+    wrap.classList.add('on');
+  }finally{btn.disabled=false;spin.classList.remove('on')}
+}
+</script>
+</body>
+</html>
