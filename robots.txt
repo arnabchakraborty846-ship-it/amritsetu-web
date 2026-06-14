@@ -1,0 +1,7 @@
+# robots.txt for https://www.amritsetu.in/
+# Allows all search and AI crawlers (you WANT discovery and AI visibility).
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.amritsetu.in/sitemap.xml
